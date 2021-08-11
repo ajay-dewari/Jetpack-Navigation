@@ -10,9 +10,10 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val userName = edit_text_username.text.toString()
-        val pwd = edit_text_password.text.toString()
-        button_confirm.setOnClickListener{
+
+        button_confirm.setOnClickListener {
+            val userName = edit_text_username.text.toString()
+            val pwd = edit_text_password.text.toString()
             val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(userName, pwd)
             findNavController().navigate(action)
         }
