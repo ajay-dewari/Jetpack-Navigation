@@ -3,9 +3,9 @@ package me.ajay.jetpack_navigation
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.android.synthetic.main.fragment_welcome.text_view_username
-import kotlinx.android.synthetic.main.fragment_welcome.text_view_password
+import kotlinx.android.synthetic.main.fragment_welcome.*
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
@@ -15,5 +15,10 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         super.onViewCreated(view, savedInstanceState)
         text_view_username.text = args.username
         text_view_password.text = args.passward
+
+        button_ok.setOnClickListener {
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
+            findNavController().navigate(action)
+        }
     }
 }
