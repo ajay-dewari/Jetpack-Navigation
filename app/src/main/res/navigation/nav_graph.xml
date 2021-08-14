@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="me.ajay.jetpack_navigation.HomeFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
