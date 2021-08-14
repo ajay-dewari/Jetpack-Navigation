@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="me.ajay.jetpack_navigation.HomeFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
@@ -64,4 +65,9 @@
         app:exitAnim="@anim/slide_out_bottom"
         app:popEnterAnim="@anim/slide_in_bottom"
         app:popExitAnim="@anim/slide_in_top" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="me.ajay.jetpack_navigation.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
 </navigation>
